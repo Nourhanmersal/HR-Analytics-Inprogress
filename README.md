@@ -19,4 +19,6 @@ Finance Department
 - after going throuhg the dataset using SQL big query, it has no unique ID, we cant check for the duplicates as they might be diffrenet employee with the same data, the data has no null values, and is properly formatted. the dataset is clean, reliable and error-free.
 
 3- Analyze
+- Perform descriptive analysis and data profiling on all the numeric values in the dataset to check for outliersor any interesting data points.
+- Calculate the turnover rate by divide the number of people who left by the total number of employees.
 
