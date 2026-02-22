@@ -22,8 +22,8 @@ FROM `temp-table-ex-485819.HRDataset.HRdataset`
 SELECT 
 max(satisfaction_level) AS maximum_satisfaction_level,
 min (satisfaction_level) AS minimum_satisfaction_level, 
-AVG(satisfaction_level) AS average_statifaction,
-STDDEV(satisfaction_level) AS STDDEVv,
-AVG(satisfaction_level) + (3 * STDDEV(satisfaction_level)) as upper_limit,
-AVG(satisfaction_level) - (3 * STDDEV(satisfaction_level)) as lower_limit
+round(AVG(satisfaction_level),2) AS average_statifaction,
+round(STDDEV(satisfaction_level),2) AS STDDEVv,
+round(AVG(satisfaction_level) + (3 * STDDEV(satisfaction_level)),2) as upper_limit,
+round(AVG(satisfaction_level) - (3 * STDDEV(satisfaction_level)),2) as lower_limit
 FROM `temp-table-ex-485819.HRDataset.HRdataset`
