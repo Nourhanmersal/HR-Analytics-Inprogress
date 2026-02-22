@@ -16,4 +16,7 @@ Finance Department
 - Project goal/Metrics: To identify the key drivers of employee attrition and provide data-driven recommendations to improve retention rates and reduce the financial impact of turnover.
 
 2- Prepare
-- after going throuhg the dataset using SQL big query, it has no unique ID, we cant check for the duplicates as they might be diffrenet employee wuth the same data, the data has no null values, and is properly formatted. the dataset is clean, reliable and error-free.
+- after going throuhg the dataset using SQL big query, it has no unique ID, we cant check for the duplicates as they might be diffrenet employee with the same data, the data has no null values, and is properly formatted. the dataset is clean, reliable and error-free.
+
+3- Analyze
+
