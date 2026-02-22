@@ -17,3 +17,13 @@ FROM `temp-table-ex-485819.HRDataset.HRdataset`
 
 SELECT distinct `left`
 FROM `temp-table-ex-485819.HRDataset.HRdataset`
+
+--Descriptive analysis (I have repeated the same query on last_evaluation, number_project, average_montly_hours, time_spend_company)
+SELECT 
+max(satisfaction_level) AS maximum_satisfaction_level,
+min (satisfaction_level) AS minimum_satisfaction_level, 
+AVG(satisfaction_level) AS average_statifaction,
+STDDEV(satisfaction_level) AS STDDEVv,
+AVG(satisfaction_level) + (3 * STDDEV(satisfaction_level)) as upper_limit,
+AVG(satisfaction_level) - (3 * STDDEV(satisfaction_level)) as lower_limit
+FROM `temp-table-ex-485819.HRDataset.HRdataset`
