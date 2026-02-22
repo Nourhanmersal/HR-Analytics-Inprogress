@@ -27,3 +27,11 @@ round(STDDEV(satisfaction_level),2) AS STDDEVv,
 round(AVG(satisfaction_level) + (3 * STDDEV(satisfaction_level)),2) as upper_limit,
 round(AVG(satisfaction_level) - (3 * STDDEV(satisfaction_level)),2) as lower_limit
 FROM `temp-table-ex-485819.HRDataset.HRdataset`
+
+--Turnover rate
+SELECT 
+COUNT(*) AS total_employees,
+SUM(`left`) AS total_left,
+COUNT(*) - SUM(`left`) AS total_stayed,
+round(((SUM(`left`)/COUNT(*))*100),2) AS turnover_rate
+FROM `temp-table-ex-485819.HRDataset.HRdataset`
