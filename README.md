@@ -21,4 +21,5 @@ Finance Department
 3- Analyze
 - Perform descriptive analysis and data profiling on all the numeric values in the dataset to check for outliersor any interesting data points.
 - Calculate the turnover rate by divide the number of people who left by the total number of employees.
+- correlate a continuous variable "Left" correlation with satisfaction level, last evaluation, number of projects, average monthly hours, time spend at the company.
 
