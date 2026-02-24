@@ -36,12 +36,12 @@ COUNT(*) - SUM(`left`) AS total_stayed,
 round(((SUM(`left`)/COUNT(*))*100),2) AS turnover_rate
 FROM `temp-table-ex-485819.HRDataset.HRdataset`
 
--- `Left` correlation with satisfaction level, last evaluation, number of projects, average monthly hours, time spend at the company
+-- `Left` correlation with satisfaction level, last evaluation, number of projects, average monthly hours
 SELECT 
-corr(`left`, satisfaction_level),
-corr(`left`, last_evaluation),
-corr(`left`, number_project),
-corr(average_montly_hours,`left`) AS corr_workload_turnover,
-corr(time_spend_company, `left`) AS corr_promotion_turnover
-FROM `temp-table-ex-485819.HRDataset.HRdataset` 
-
+  `left`,
+  ROUND(AVG(satisfaction_level), 2) AS avg_satisfaction,
+  ROUND(AVG(last_evaluation), 2) AS avg_evaluation,
+  ROUND(AVG(average_montly_hours), 1) AS avg_hours,
+  ROUND(AVG(number_project), 1) AS avg_projects
+FROM `temp-table-ex-485819.HRDataset.HRdataset`
+GROUP BY `left`
